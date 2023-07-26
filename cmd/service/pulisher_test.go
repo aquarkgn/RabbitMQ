@@ -36,7 +36,7 @@ func TestPublishMessage(t *testing.T) {
 	}
 
 	// 推送消息到交换机
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 10000; i++ {
 		message := fmt.Sprintf("消息 %d", i)
 		err = channel.Publish(app.ExchangeName, "", false, false, amqp.Publishing{
 			ContentType: "text/plain",
