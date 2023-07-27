@@ -46,6 +46,7 @@ func TestPublishMessage(t *testing.T) {
 			t.Errorf("无法推送消息: %v", err)
 		} else {
 			t.Logf("已推送消息: %s", message)
+			log.Printf("已推送消息: %s", message)
 		}
 		time.Sleep(time.Second)
 	}
